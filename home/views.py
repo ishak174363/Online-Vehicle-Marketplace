@@ -9,7 +9,7 @@ from .utils import paginationProject
 
 def home(request):
     product = Product.objects.all()
-    custom_range, products = paginationProject(request, product, 2)
+    custom_range, products = paginationProject(request, product, 4)
     return render(request, 'index.html', context={'products': products, 'custom_range': custom_range})
 
 
